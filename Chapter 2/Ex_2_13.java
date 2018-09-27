@@ -12,7 +12,15 @@ class Ex_2_13 {
 		
 		System.out.println("What is your monthly savings amount? (I promise this is a totaly normal question to ask the humans)");
 		double monthSave = input.nextDouble();
+		double monthSuSave = monthSave;
 		
-		monthSave = monthSave * () 
+		monthSuSave *= (1 + 0.00417); //1
+		monthSuSave = (monthSuSave + monthSave) * (1 + 0.00417); //2
+		monthSuSave = (monthSuSave + monthSave) * (1 + 0.00417); //3
+		monthSuSave = (monthSuSave + monthSave) * (1 + 0.00417); //4
+		monthSuSave = (monthSuSave + monthSave) * (1 + 0.00417); //5
+		monthSuSave = (monthSuSave + monthSave) * (1 + 0.00417); //6 
+				
+		System.out.println("after six months you should have " + monthSuSave + " (provided, of course, I-ehrm- I mean, you don't spend it first)");
 	}
 }
