@@ -1,7 +1,6 @@
 /*
 Author: Kal
 Date: 11/9/18
-
 Running a payrole application
 */
 
@@ -29,16 +28,16 @@ class Ex_4_23 {
 		gp = hw * hpr;
 		fw = gp * ftw;
 		round = Math.rint(fw * 100);
-		fw = round;
+		fw = round / 100;
 		sw = gp * stw;
 		round = Math.rint(sw * 100);
-		sw = round;
+		sw = round / 100;
 		td = fw + sw;
 		round = Math.rint(td * 100);
-		td = round;
+		td = round / 100;
 		np = gp - td;
 		round = Math.rint(np * 100);
-		np = round;
+		np = round / 100;
 		
 		//display
 		System.out.println("Employee's Name: " + nam);
