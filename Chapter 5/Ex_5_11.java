@@ -15,11 +15,12 @@ class Ex_5_11 {
 		xPerLine = 0;
 		while (num <= 200) {
 			if (num % 5 == 0 ^ num % 6 == 0) {
-				if (xPerLine <= 10) {
+				if (xPerLine < 10) {
 					System.out.print(num + ", ");
 					xPerLine++;
 				}else {
 					System.out.println("");
+					xPerLine = 0;
 				}
 				
 			}
