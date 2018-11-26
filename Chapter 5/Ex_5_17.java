@@ -11,8 +11,14 @@ class Ex_5_17 {
 		Scanner kygrb = new Scanner(System.in);
 		int pylvl, lvlcount, curlvl, blnkspace, spcCount;
 		
-		System.out.print("How many pyramid tiers do you want? ");
+		System.out.print("How many pyramid tiers do you want? (1-15)  ");
 		pylvl = kygrb.nextInt();
+		
+		while (pylvl < 1 || pylvl >15) {
+			//reprompting to stop rule breaking
+			System.out.print("How many pyramid tiers do you want? ()");
+			pylvl = kygrb.nextInt();
+		}
 		
 		lvlcount = 1;
 		while (lvlcount <= pylvl) {
@@ -21,10 +27,10 @@ class Ex_5_17 {
 			spcCount = 1;
 			while (curlvl >= 1) {
 				if (spcCount <= blnkspace) {
-					System.out.print("  "); //prints blank spaces to format the numbers correctly
+					System.out.print("   "); //prints blank spaces to format the numbers correctly
 					spcCount++;
 				}else {
-					System.out.print(curlvl + " ");  //doesn't print till above is done
+					System.out.printf("%3d", curlvl);  //doesn't print till above is done
 					curlvl--;
 				}
 				
@@ -35,7 +41,7 @@ class Ex_5_17 {
 					System.out.print(""); //makes sure i don't have two ones
 					curlvl++;
 				}else if (curlvl <= lvlcount) {
-					System.out.print(curlvl + " "); //other half of the pyramid
+					System.out.printf("%3d", curlvl); //other half of the pyramid
 					curlvl++;
 				}else {
 					System.out.println(""); //goes to the next line
