@@ -6,7 +6,6 @@ returns a string with a number of characters equal to the width specified using 
 */
 
 import java.util.Scanner;
-import java.text.*;
 
 class Ex_6_37 {
 	public static void main(String[] args) {
